@@ -4,7 +4,7 @@ def begins_with_r(array)
       return false
     end
   end
-  return true 
+  return true
 end
 
 
@@ -42,9 +42,9 @@ def count_elements(data)
   new_hash = {}
   data.each do |thing|
     if new_hash.has_key?(thing[:name])
-      new_hash[thing[:name]] += 1 
+      new_hash[thing[:name]] += 1
     else
-      new_hash[thing[:name]] = 1 
+      new_hash[thing[:name]] = 1
     end
   end
   new_hash.map { |key, value| {:name => key , :count => value} }
@@ -57,14 +57,14 @@ def merge_data(keys, data)
     thing.each do |lable, value|
       data.each do |nested_thing|
         nested_thing.each do |key,hash|
-          if value == key 
+          if value == key
             new_array << thing.merge(hash)
           end
         end
       end
     end
   end
-   new_array   
+   new_array
 end
 
 def find_cool(array)
